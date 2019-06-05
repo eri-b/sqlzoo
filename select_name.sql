@@ -40,15 +40,26 @@ SELECT name FROM world
  WHERE name LIKE '____'
 
 -- 11
-
+SELECT name
+  FROM world
+ WHERE name LIKE capital
 
 -- 12
-
+SELECT name
+  FROM world
+ WHERE capital LIKE concat(name, ' City')
 
 -- 13
-
+SELECT capital, name
+  FROM world
+ WHERE capital LIKE concat(name, '%')
 
 -- 14
-
+SELECT capital, name
+  FROM world
+ WHERE capital LIKE concat(name, '%') AND capital != name
 
 -- 15
+SELECT name, capital
+  FROM world
+ WHERE capital LIKE concat(name, '%') AND capital != name
